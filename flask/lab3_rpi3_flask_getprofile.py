@@ -6,9 +6,8 @@ URL_CASE1="/iot/<cat>"
 URL_CASE2="/iot/<cat>/<mode>"
 
 @app.route(URL_CASE1)
-def get_profile(cat):
-	print(cat)
-	return 'profile: ' +cat
+def home():
+	return	render_template('indexEx.html') 
 
 @app.route(URL_CASE2)
 def get_profile2(cat, mode):
