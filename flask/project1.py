@@ -37,16 +37,10 @@ subLed = "iot/21400670/check/led"
 subUsbled = "iot/21400670/check/usbled"
 message='none'
 #############option###############
-ledBool = False 
-ledValue = "Off"
 temperatureValue = "none" 
 humidityValue = "none" 
-usbledValue = "Off"
-usbledBool = False
 pirValue = "Not detected"
-pirBool = False
 cdsValue = "none"
-homeBool = True 
 ledIndex = 0
 prevLedIndex = 0
 usbledIndex = 0
