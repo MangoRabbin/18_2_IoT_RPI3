@@ -98,35 +98,28 @@ def usbledoff():
 def getDht22():
 	mqttc.publish(pub_topic, "sensor/dht22")	
 	time.sleep(0.2)
-	mqttc.subscribe(subDht22)
-	mqttc.subscribe(commonSubDht22)
 	time.sleep(1)
 	return home()
 @app.route('/'+urlDht22_t)
 def getDht22_t():
 	mqttc.publish(pub_topic, "sensor/dht22_t")
-	mqttc.subscribe(subDht22_t)
-	mqttc.subscribe(commonSubDht22_t)
 	time.sleep(1)
 	return home()
 @app.route('/'+urlDht22_h)
 def getDht22_h():
 	mqttc.publish(pub_topic, "sensor/dht22_h")
-	mqttc.subscribe(subDht22_h)
-	mqttc.subscribe(commonSubDht22_h)
 	time.sleep(1)
 	return home()
 ################### cds  ######################
 @app.route('/'+urlCds)
 def getCds():
 	mqttc.publish(pub_topic, "sensor/cds")
-	mqttc.subscribe(subCds)
-	mqttc.subscribe(commonSubCds)
 	time.sleep(1)
 	return home()
 @app.route('/'+urlPir)
 def getPir():
 	mqttc.subscribe(subPir)
+	time.sleep(0.3)
 	return render_template('pir.html', pir=pirValue)
 
 ################### Function defition #################
@@ -192,4 +185,12 @@ if __name__=="__main__":
 	mqttc.on_connection=on_connection 
 	mqttc.connect(mqtt_broker, 1883, 60) 
 	mqttc.loop_start()
+	mqttc.subscribe(subDht22)
+	mqttc.subscribe(commonSubDht22)
+	mqttc.subscribe(subDht22_t)
+	mqttc.subscribe(commonSubDht22_t)
+	mqttc.subscribe(subDht22_h)
+	mqttc.subscribe(commonSubDht22_h)
+	mqttc.subscribe(subCds)
+	mqttc.subscribe(commonSubCds)
 	app.run(host="0.0.0.0", port=80, debug=True) 
