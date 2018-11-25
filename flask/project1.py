@@ -3,9 +3,10 @@ import paho.mqtt.client as mqtt
 import time 
 
 app=Flask(__name__)
-mqtt_broker = "192.168.2.4"
+#mqtt_broker = "203.252.106.154"
 mqtt_user = "iot"
 mqtt_pwd = ".csee"
+mqtt_broker = "192.168.2.4"
 
 ###########URL##################
 pub_topic="iot/21400670"

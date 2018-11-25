@@ -1,0 +1,49 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Project_nodeMCU_RPI3_Flask</title>
+<body>
+<div style='width: 400px; margin: auto; text-align: center;'>
+<h1>Project 1</h1>
+<h2>for Led, usbLed, DHT22, CDS</h2>
+
+<p></p>
+<h3> LED Control </h3>
+<p>
+<a href=/iot/192.168.2.4/led><button> LED </button></a>
+<a href=/iot/192.168.2.4/ledon><button>LED On </button></a>
+<a href=/iot/192.168.2.4/ledoff><button>LED Off </button></a><br/>
+</p>
+<p></p>
+<h3> USBLED Control</h3>
+<p>
+<a href=/iot/192.168.2.4/usbled><button>USBLED</button></a>
+<a href=/iot/192.168.2.4/usbledon><button>USBLED On </button></a>
+<a href=/iot/192.168.2.4/usbledoff><button>USBLED Off </button></a><br/>
+</p>
+<h3> DHT22 - Temperature, Humidity </h3>
+<p>
+<a href=/iot/192.168.2.4/dht22><button>DHT22</button></a>
+<a href=/iot/192.168.2.4/dht22_t><button>check Temperature</button></a>
+<a href=/iot/192.168.2.4/dht22_h><button>check humidity</button></a>
+</p>
+<p>
+Temperature : {{temperature}}
+Humidity : {{humidity}}
+</p> 
+<h3> CDS - light </h3>
+<p>
+<a href=/iot/192.168.2.4/cds><button>Check cds</button></a>
+</p>
+<p>
+CDS : {{cds}}
+</p>
+<p>
+CHECK PIR -> 
+<a href=/iot/192.168.2.4/pir><button>PIR</button></a>
+</p>
+</div> 
+</body> 
+</html>
+
